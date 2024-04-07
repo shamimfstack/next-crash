@@ -65,3 +65,22 @@ const roboto = Roboto({
     title: "About us",
     description: "This is a blog about page",
   }
+
+## Dynamic metadata generation
+export async function generateMetadata({ params }) {
+    const { id } = params;
+    const post = await getPost(id);
+
+    return {
+        title: post.title,
+        description: post.body
+    }
+}
+
+export default async function getPost(id) {
+    const result = fetch(
+        `https://jsonplaceholder.typicode.com/posts/${id}`
+    );
+
+    return (await result).json();
+}
