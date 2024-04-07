@@ -44,5 +44,19 @@ import cakeImg from "@/public/images/birthday_cake.jpg"
 
 <Image src={cakeImg} alt="birthday cake image" />
 
+## Font optimization:
 
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+    weight: ['400', '700'],
+    style: ['italic'],
+    subsets: ['latin'],
+  })
+
+  return (
+    <main className={roboto.className}>
+      <Component {...pageProps} />
+    </main>
+  )
 

@@ -1,5 +1,12 @@
 import React from 'react';
 import Link from "next/link"
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+    weight: ['400', '700'],
+    style: ['italic'],
+    subsets: ['latin'],
+  })
 
 const AboutLayout = ({children}) => {
     return (
