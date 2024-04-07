@@ -60,3 +60,8 @@ const roboto = Roboto({
     </main>
   )
 
+## Setting metadata for individual page
+  export const metadata = {
+    title: "About us",
+    description: "This is a blog about page",
+  }

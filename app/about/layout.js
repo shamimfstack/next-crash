@@ -8,6 +8,12 @@ const roboto = Roboto({
     subsets: ['latin'],
   })
 
+//   setting metadata for individual page
+  export const metadata = {
+    title: "About us",
+    description: "This is a blog about page",
+  }
+
 const AboutLayout = ({children}) => {
     return (
         <div>
